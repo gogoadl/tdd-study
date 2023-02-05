@@ -1,6 +1,6 @@
 
 class Money implements Expression{
-    Expression times(int multiplier) {
+    public Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
     String currency() {
@@ -19,8 +19,6 @@ class Money implements Expression{
 
     protected int amount;
     protected String currency;
-
-
 
     public Expression plus(Expression addend) {
         return new Sum(this, addend);
