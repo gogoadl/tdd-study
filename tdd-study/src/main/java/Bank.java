@@ -14,7 +14,7 @@ public class Bank {
         Integer rate = (Integer) rates.get(new Pair(from, to));
         return rate.intValue();
     }
-    
+
     private class Pair {
         private String from;
         private String to;
