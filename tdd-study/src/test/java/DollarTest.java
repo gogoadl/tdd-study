@@ -50,4 +50,17 @@ class DollarTest {
         Money result = bank.reduce(sum, "USD"); // bank.reduce는 sum을 받고, 통화가 같다면
         assertEquals(Money.dollar(7), result); // money들의 amount를 합친 값을 갖는 Money 객체
     }
+
+    @Test
+    public void testReduceMoneyDifferentCurrency() {
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(Money.franc(2), "USD");
+        assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().rate("USD", "USD"));
+    }
 }
