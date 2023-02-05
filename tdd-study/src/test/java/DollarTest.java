@@ -27,4 +27,27 @@ class DollarTest {
         Money reduced = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(10), reduced);
     }
+
+    @Test
+    public void testPlusReturnsSum() {
+        Money five = Money.dollar(5);
+        Expression result = five.plus(five);
+        Sum sum = (Sum) result;
+        assertEquals(five, sum.augend); // 덧셈의 첫 인자를 augend라고 함.
+        assertEquals(five, sum.addend);
+    }
+    @Test
+    public void testReduceMoney() {
+        Bank bank = new Bank();
+        Money result = bank.reduce(Money.dollar(1), "USD");
+        assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testReduceSum() {
+        Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
+        Bank bank = new Bank();
+        Money result = bank.reduce(sum, "USD"); // bank.reduce는 sum을 받고, 통화가 같다면
+        assertEquals(Money.dollar(7), result); // money들의 amount를 합친 값을 갖는 Money 객체
+    }
 }

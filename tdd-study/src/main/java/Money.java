@@ -20,8 +20,10 @@ class Money implements Expression{
     protected int amount;
     protected String currency;
 
+
+
     Expression plus(Money addend) {
-        return new Money(amount + addend.amount, currency);
+        return new Sum(this, addend);
     }
     @Override
     public boolean equals(Object o) {
@@ -32,5 +34,10 @@ class Money implements Expression{
     @Override
     public String toString() {
         return amount + " " + currency;
+    }
+
+    @Override
+    public Money reduce(String to) {
+        return this;
     }
 }
