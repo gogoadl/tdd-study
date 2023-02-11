@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DollarTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-02-07T09:29:03" hostname="baghyeon-uui-MacBookAir.local" time="0.019">
+  <properties/>
+  <testcase name="testReduceSum()" classname="DollarTest" time="0.012"/>
+  <testcase name="testSimpleAddition()" classname="DollarTest" time="0.001"/>
+  <testcase name="testSumTimes()" classname="DollarTest" time="0.001"/>
+  <testcase name="testMultiplication()" classname="DollarTest" time="0.0"/>
+  <testcase name="testSumPlusMoney()" classname="DollarTest" time="0.0"/>
+  <testcase name="testMixedAddition()" classname="DollarTest" time="0.0"/>
+  <testcase name="testReduceMoney()" classname="DollarTest" time="0.0"/>
+  <testcase name="testIdentityRate()" classname="DollarTest" time="0.0"/>
+  <testcase name="testEquality()" classname="DollarTest" time="0.001"/>
+  <testcase name="testPlusReturnsSum()" classname="DollarTest" time="0.0"/>
+  <testcase name="testReduceMoneyDifferentCurrency()" classname="DollarTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
