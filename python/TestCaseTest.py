@@ -1,7 +1,6 @@
 from TestCase import *
 from WasRun import *
 
-
 class TestCaseTest(TestCase):
     def setUp(self):
         self.test = WasRun("testMethod")

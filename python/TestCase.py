@@ -13,7 +13,7 @@ class TestCase:
         method = getattr(self, self.name)
         method()
         self.tearDown()
-        return result()
+        return result
 
     def tearDown(self):
         pass
